@@ -1,0 +1,656 @@
+/* ===================================================================
+   THEME 2: DEEP MIDNIGHT / CYBER-CORPORATE (DARK MODE)
+   Benchmark: Linear • Vercel • Ramp • Palantir
+   Palette: Deepest Void Navy (#030914), Midnight Slate (#08162B), Electric Azure (#1D75D8), Cyan Glow (#38BDF8)
+   Typography: Bold Geometric Display Sans (League Spartan) + Monospace Code Accents (JetBrains Mono)
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=League+Spartan:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Deep Midnight Palette */
+  --mid-bg: #030914;            /* Deepest Void Navy */
+  --mid-bg-elevated: #071326;   /* Layered dark section */
+  --mid-card: rgba(11, 28, 54, 0.6); /* Frosted Glass Surface */
+  --mid-card-hover: rgba(16, 38, 72, 0.85);
+  
+  /* Borders & Grids */
+  --mid-border: rgba(29, 117, 216, 0.22); /* Subtle Azure Wireframe */
+  --mid-border-glow: rgba(56, 189, 248, 0.5);
+  --mid-grid-line: rgba(255, 255, 255, 0.04);
+
+  /* Neon & Electric Brand Accents */
+  --mid-azure: #1D75D8;         /* Logo Electric Azure */
+  --mid-cyan: #38BDF8;          /* Cyber Cyan Glow */
+  --mid-blue-sky: #00A3FF;
+  
+  /* Text Spectrum */
+  --mid-text-bright: #FFFFFF;
+  --mid-text-body: #94A3B8;     /* Slate Silver */
+  --mid-text-muted: #64748B;    /* Muted Labels */
+
+  /* Gradients */
+  --mid-gradient-hero: linear-gradient(135deg, #FFFFFF 30%, #38BDF8 70%, #1D75D8 100%);
+  --mid-gradient-card: linear-gradient(180deg, rgba(29, 117, 216, 0.08) 0%, rgba(3, 9, 20, 0.6) 100%);
+  --mid-gradient-glow: radial-gradient(circle, rgba(29, 117, 216, 0.25) 0%, transparent 70%);
+
+  /* Typography */
+  --font-display: 'League Spartan', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* Shadows & Glows */
+  --mid-glow-sm: 0 0 15px rgba(29, 117, 216, 0.3);
+  --mid-glow-cyan: 0 0 20px rgba(56, 189, 248, 0.4);
+  --mid-glow-card: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Global */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--mid-bg);
+  color: var(--mid-text-body);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(29, 117, 216, 0.12) 0%, transparent 50%),
+    linear-gradient(var(--mid-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--mid-grid-line) 1px, transparent 1px);
+  background-size: 100% 100%, 48px 48px, 48px 48px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--mid-text-bright);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.12;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-spacing {
+  padding: 100px 0;
+  position: relative;
+}
+
+/* Cyber Utility Bar */
+.cyber-top-bar {
+  background: rgba(3, 9, 20, 0.95);
+  border-bottom: 1px solid var(--mid-border);
+  padding: 8px 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--mid-cyan);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cyber-top-bar span.live-beacon {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--mid-cyan);
+  margin-right: 8px;
+  box-shadow: 0 0 10px var(--mid-cyan);
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* Fixed Midnight Header */
+header.midnight-header {
+  height: 80px;
+  background: rgba(3, 9, 20, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--mid-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-wrap img {
+  height: 50px;
+  width: auto;
+  filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.25));
+}
+
+.midnight-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.midnight-nav a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #CBD5E1;
+  letter-spacing: 0.02em;
+  position: relative;
+  padding: 6px 0;
+}
+
+.midnight-nav a:hover,
+.midnight-nav a.active {
+  color: var(--mid-cyan);
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+}
+
+/* Cyber Button Primitives */
+.btn-mid {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 12px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-mid-primary {
+  background: linear-gradient(135deg, var(--mid-azure) 0%, var(--mid-cyan) 100%);
+  color: #030914;
+  border: 1px solid var(--mid-cyan);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+}
+
+.btn-mid-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.6);
+  color: #000;
+}
+
+.btn-mid-outline {
+  background: rgba(11, 28, 54, 0.4);
+  color: var(--mid-text-bright);
+  border: 1px solid var(--mid-border);
+  backdrop-filter: blur(8px);
+}
+
+.btn-mid-outline:hover {
+  border-color: var(--mid-cyan);
+  background: rgba(29, 117, 216, 0.15);
+  box-shadow: var(--mid-glow-sm);
+  color: var(--mid-cyan);
+  transform: translateY(-2px);
+}
+
+/* Cyber Kicker */
+.cyber-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid-cyan);
+  padding: 6px 14px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 4px;
+  margin-bottom: 24px;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
+}
+
+/* Hero Section */
+.hero-midnight {
+  padding: 110px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-glow-orb {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(29, 117, 216, 0.2) 0%, rgba(56, 189, 248, 0.05) 50%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.hero-title {
+  font-size: 4.2rem;
+  line-height: 1.05;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.hero-title span.glow-gradient {
+  background: var(--mid-gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 35px rgba(56, 189, 248, 0.3);
+}
+
+.hero-sub {
+  font-size: 1.25rem;
+  color: var(--mid-text-body);
+  line-height: 1.65;
+  max-width: 740px;
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+/* Cyber Badges (Institutions) */
+.cyber-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 24px;
+  border-top: 1px solid var(--mid-border);
+}
+
+.cyber-badge {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: #E2E8F0;
+  background: rgba(14, 34, 64, 0.5);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 6px 14px;
+  border-radius: 4px;
+  transition: var(--transition);
+  backdrop-filter: blur(6px);
+}
+
+.cyber-badge:hover {
+  border-color: var(--mid-cyan);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+  color: var(--mid-cyan);
+  transform: translateY(-2px);
+}
+
+/* 3-Metric Stripe (Neon Dark Mode) */
+.midnight-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.mid-metric-card {
+  background: var(--mid-card);
+  border: 1px solid var(--mid-border);
+  border-radius: 8px;
+  padding: 32px 24px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.mid-metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--mid-cyan), transparent);
+}
+
+.mid-metric-card:hover {
+  border-color: var(--mid-cyan);
+  transform: translateY(-4px);
+  box-shadow: var(--mid-glow-cyan);
+}
+
+.mid-metric-num {
+  font-family: var(--font-display);
+  font-size: 3.4rem;
+  font-weight: 800;
+  color: var(--mid-text-bright);
+  line-height: 1;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #38BDF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mid-metric-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mid-cyan);
+  font-weight: 600;
+}
+
+/* 4-Pillar Glass Cards */
+.glass-pillars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.glass-pillar {
+  background: var(--mid-card);
+  border: 1px solid var(--mid-border);
+  border-radius: 10px;
+  padding: 32px 28px;
+  backdrop-filter: blur(12px);
+  transition: var(--transition);
+  position: relative;
+}
+
+.glass-pillar:hover {
+  background: var(--mid-card-hover);
+  border-color: var(--mid-cyan);
+  transform: translateY(-4px);
+  box-shadow: var(--mid-glow-cyan);
+}
+
+.glass-pillar-num {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--mid-cyan);
+  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+}
+
+.glass-pillar h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--mid-text-bright);
+}
+
+.glass-pillar p {
+  font-size: 0.95rem;
+  color: var(--mid-text-body);
+  line-height: 1.65;
+}
+
+/* Capabilities (6-Card Cyber Grid) */
+.cyber-capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.cyber-cap-card {
+  background: var(--mid-card);
+  border: 1px solid var(--mid-border);
+  border-radius: 10px;
+  padding: 32px 26px;
+  backdrop-filter: blur(12px);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.cyber-cap-card:hover {
+  background: var(--mid-card-hover);
+  border-color: var(--mid-azure);
+  transform: translateY(-6px);
+  box-shadow: var(--mid-glow-sm);
+}
+
+.cyber-icon-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background: rgba(29, 117, 216, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: var(--mid-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(29, 117, 216, 0.2);
+}
+
+.cyber-cap-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.cyber-cap-card p {
+  font-size: 0.92rem;
+  color: var(--mid-text-body);
+  line-height: 1.6;
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+.cyber-deliverables {
+  list-style: none;
+  border-top: 1px solid var(--mid-border);
+  padding-top: 16px;
+}
+
+.cyber-deliverables li {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #CBD5E1;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cyber-deliverables li::before {
+  content: '>';
+  color: var(--mid-cyan);
+  font-weight: bold;
+}
+
+/* Talent Ecosystem (Cyber Network View) */
+.cyber-ecosystem-box {
+  background: linear-gradient(180deg, rgba(14, 36, 71, 0.6) 0%, rgba(3, 9, 20, 0.8) 100%);
+  border: 1px solid var(--mid-border);
+  border-radius: 12px;
+  padding: 60px 48px;
+  backdrop-filter: blur(16px);
+  margin-top: 40px;
+  box-shadow: 0 0 35px rgba(29, 117, 216, 0.15);
+}
+
+.cyber-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 36px;
+}
+
+.cyber-tier-card {
+  background: rgba(3, 9, 20, 0.6);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 8px;
+  padding: 22px 18px;
+  transition: var(--transition);
+}
+
+.cyber-tier-card:hover {
+  border-color: var(--mid-cyan);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+  transform: translateY(-3px);
+}
+
+.cyber-tier-title {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--mid-cyan);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.cyber-tier-desc {
+  font-size: 0.85rem;
+  color: var(--mid-text-body);
+  line-height: 1.5;
+}
+
+/* Command Center Connect Band (Zero Pricing) */
+.midnight-connect-box {
+  background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.15) 0%, rgba(3, 9, 20, 0.8) 70%);
+  border: 1px solid var(--mid-border);
+  border-radius: 16px;
+  padding: 70px 40px;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+  box-shadow: var(--mid-glow-cyan);
+}
+
+.midnight-connect-box h2 {
+  font-size: 3.2rem;
+  margin-bottom: 16px;
+}
+
+.midnight-connect-box p {
+  font-size: 1.15rem;
+  color: var(--mid-text-body);
+  max-width: 680px;
+  margin: 0 auto 36px;
+  line-height: 1.65;
+}
+
+/* Midnight Footer */
+footer.midnight-footer {
+  border-top: 1px solid var(--mid-border);
+  background: #02060D;
+  padding: 60px 0 30px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-brand img {
+  height: 48px;
+  margin-bottom: 14px;
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.3));
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
+  color: var(--mid-text-muted);
+  max-width: 320px;
+  line-height: 1.6;
+}
+
+.footer-links-group h4 {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mid-cyan);
+  margin-bottom: 16px;
+}
+
+.footer-links-group ul {
+  list-style: none;
+}
+
+.footer-links-group ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links-group ul a {
+  font-size: 0.88rem;
+  color: var(--mid-text-body);
+}
+
+.footer-links-group ul a:hover {
+  color: var(--mid-cyan);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--mid-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-title { font-size: 3.2rem; }
+  .cyber-capabilities-grid, .glass-pillars, .cyber-tiers-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .midnight-nav { display: none; }
+  .hero-title { font-size: 2.5rem; }
+  .midnight-metrics-grid, .cyber-capabilities-grid, .glass-pillars, .cyber-tiers-grid { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; gap: 30px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+}

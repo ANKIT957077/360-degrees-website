@@ -1,0 +1,537 @@
+/* ===================================================================
+   THEME 4: SWISS RESEARCH LAB / DATA THINK-TANK
+   Benchmark: MIT Tech Review • Bloomberg Beta • Swiss International Typographic Style
+   Palette: Monochromatic White & Charcoal with Surgical Logo Azure (#1D75D8)
+   Typography: Technical Geometric Grotesk (Space Grotesk) + Data Monospace (Space Mono)
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Swiss Monochrome Spectrum */
+  --ch-black: #0A0E17;          /* Jet Ink */
+  --ch-charcoal: #1E293B;       /* Structural Dark */
+  --ch-gray-dark: #334155;
+  --ch-gray-muted: #64748B;
+  --ch-border: #D1D5DB;         /* Crisp Technical Wireframe */
+  --ch-border-light: #E5E7EB;
+  --ch-bg-light: #F8FAFC;       /* Technical Paper Background */
+  --ch-white: #FFFFFF;
+
+  /* The Solo Brand Color: Electric Azure from Logo */
+  --ch-azure: #1D75D8;
+  --ch-azure-light: rgba(29, 117, 216, 0.08);
+  --ch-azure-hover: #155EAF;
+
+  /* Typography */
+  --font-swiss: 'Space Grotesk', -apple-system, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+  --ch-transition: all 0.2s ease-in-out;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--ch-white);
+  color: var(--ch-gray-dark);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-swiss);
+  color: var(--ch-black);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--ch-transition);
+}
+
+.container {
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-spacing {
+  padding: 90px 0;
+  border-bottom: 1px solid var(--ch-border);
+}
+
+.bg-paper {
+  background-color: var(--ch-bg-light);
+}
+
+/* Technical Data Bar */
+.data-top-bar {
+  background-color: var(--ch-black);
+  color: #94A3B8;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--ch-border);
+  display: flex;
+  justify-content: space-between;
+}
+
+.data-top-bar span.azure-point {
+  color: #38BDF8;
+  font-weight: bold;
+}
+
+/* Swiss Header */
+header.swiss-header {
+  height: 80px;
+  background-color: var(--ch-white);
+  border-bottom: 2px solid var(--ch-black);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.brand-wrap img {
+  height: 48px;
+  width: auto;
+}
+
+.swiss-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.swiss-nav a {
+  font-family: var(--font-swiss);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ch-black);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 6px 0;
+}
+
+.swiss-nav a:hover,
+.swiss-nav a.active {
+  color: var(--ch-azure);
+}
+
+/* Technical Button Primitives */
+.btn-swiss {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 0;
+  transition: var(--ch-transition);
+}
+
+.btn-swiss-primary {
+  background-color: var(--ch-black);
+  color: var(--ch-white);
+  border: 1px solid var(--ch-black);
+}
+
+.btn-swiss-primary:hover {
+  background-color: var(--ch-azure);
+  border-color: var(--ch-azure);
+  color: var(--ch-white);
+}
+
+.btn-swiss-outline {
+  background-color: transparent;
+  color: var(--ch-black);
+  border: 1px solid var(--ch-black);
+}
+
+.btn-swiss-outline:hover {
+  background-color: var(--ch-bg-light);
+  border-color: var(--ch-azure);
+  color: var(--ch-azure);
+}
+
+/* Technical Section Marker */
+.section-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ch-azure);
+  margin-bottom: 12px;
+  display: block;
+  font-weight: 700;
+}
+
+/* Hero Section */
+.hero-swiss {
+  padding: 90px 0 70px;
+  border-bottom: 1px solid var(--ch-border);
+  background-image: radial-gradient(#CBD5E1 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.hero-swiss .hero-title {
+  font-size: 4rem;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 24px;
+  max-width: 960px;
+}
+
+.hero-swiss .hero-title span.azure-highlight {
+  color: var(--ch-azure);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+
+.hero-swiss .hero-sub {
+  font-size: 1.25rem;
+  color: var(--ch-gray-muted);
+  line-height: 1.6;
+  max-width: 780px;
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+
+/* Institutional Matrix Strip */
+.matrix-strip {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--ch-border);
+  border-left: 1px solid var(--ch-border);
+  margin-top: 20px;
+}
+
+.matrix-cell {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 10px 18px;
+  border-right: 1px solid var(--ch-border);
+  border-bottom: 1px solid var(--ch-border);
+  background-color: var(--ch-white);
+  color: var(--ch-black);
+}
+
+.matrix-cell strong {
+  color: var(--ch-azure);
+  margin-right: 4px;
+}
+
+/* 3-Stat Metric Row (Technical Benchmarks) */
+.swiss-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-left: 1px solid var(--ch-border);
+  border-top: 1px solid var(--ch-border);
+  margin: 30px 0;
+}
+
+.swiss-metric-cell {
+  padding: 32px 24px;
+  border-right: 1px solid var(--ch-border);
+  border-bottom: 1px solid var(--ch-border);
+  background: var(--ch-white);
+}
+
+.swiss-metric-num {
+  font-family: var(--font-swiss);
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--ch-black);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.swiss-metric-num span {
+  color: var(--ch-azure);
+}
+
+.swiss-metric-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ch-gray-muted);
+  font-weight: 700;
+}
+
+/* 4-Pillar Grid (Methodology) */
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-left: 1px solid var(--ch-border);
+  border-top: 1px solid var(--ch-border);
+  margin-top: 36px;
+}
+
+.methodology-cell {
+  padding: 28px 22px;
+  border-right: 1px solid var(--ch-border);
+  border-bottom: 1px solid var(--ch-border);
+  background: var(--ch-white);
+  transition: var(--ch-transition);
+}
+
+.methodology-cell:hover {
+  background-color: var(--ch-bg-light);
+  border-bottom: 2px solid var(--ch-azure);
+}
+
+.methodology-index {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ch-azure);
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.methodology-cell h4 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.methodology-cell p {
+  font-size: 0.9rem;
+  color: var(--ch-gray-muted);
+  line-height: 1.55;
+}
+
+/* Capabilities (Technical Abstract Cards) */
+.swiss-cap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.swiss-cap-card {
+  background: var(--ch-white);
+  border: 1px solid var(--ch-border);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--ch-transition);
+}
+
+.swiss-cap-card:hover {
+  border-color: var(--ch-azure);
+  box-shadow: 4px 4px 0px var(--ch-black);
+}
+
+.cap-code {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ch-azure);
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+
+.swiss-cap-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.swiss-cap-card p {
+  font-size: 0.92rem;
+  color: var(--ch-gray-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.swiss-deliverables {
+  list-style: none;
+  border-top: 1px solid var(--ch-border-light);
+  padding-top: 16px;
+}
+
+.swiss-deliverables li {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ch-gray-dark);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.swiss-deliverables li::before {
+  content: '::';
+  color: var(--ch-azure);
+  font-weight: bold;
+}
+
+/* Talent Ecosystem (Modular Matrix) */
+.ecosystem-matrix {
+  border: 1px solid var(--ch-border);
+  background: var(--ch-white);
+  margin-top: 36px;
+}
+
+.matrix-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  border-bottom: 1px solid var(--ch-border);
+}
+
+.matrix-row:last-child {
+  border-bottom: none;
+}
+
+.matrix-label {
+  padding: 24px;
+  background: var(--ch-bg-light);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ch-azure);
+  border-right: 1px solid var(--ch-border);
+  display: flex;
+  align-items: center;
+}
+
+.matrix-content {
+  padding: 24px;
+}
+
+.matrix-content h4 {
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+
+.matrix-content p {
+  font-size: 0.9rem;
+  color: var(--ch-gray-muted);
+}
+
+/* Connect Band (Zero Pricing) */
+.swiss-connect-wrap {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.swiss-connect-wrap h2 {
+  font-size: 3.2rem;
+  margin-bottom: 16px;
+}
+
+.swiss-connect-wrap p {
+  font-size: 1.15rem;
+  color: var(--ch-gray-muted);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* Swiss Footer */
+footer.swiss-footer {
+  background: var(--ch-black);
+  color: #94A3B8;
+  padding: 60px 0 30px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #334155;
+}
+
+.footer-top img {
+  height: 44px;
+  margin-bottom: 16px;
+}
+
+.footer-col h4 {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #F8FAFC;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul a {
+  font-size: 0.88rem;
+  color: #94A3B8;
+}
+
+.footer-col ul a:hover {
+  color: var(--ch-azure);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-swiss .hero-title { font-size: 3.2rem; }
+  .swiss-cap-grid, .methodology-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-top { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .swiss-nav { display: none; }
+  .hero-swiss .hero-title { font-size: 2.4rem; }
+  .swiss-metrics-grid, .swiss-cap-grid, .methodology-grid { grid-template-columns: 1fr; }
+  .matrix-row { grid-template-columns: 1fr; }
+  .matrix-label { border-right: none; border-bottom: 1px solid var(--ch-border); }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 10px; }
+}

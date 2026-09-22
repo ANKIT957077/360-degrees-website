@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Work — 360 Degrees Consulting</title>
+  <meta name="description" content="Case studies and client engagements from 360 Degrees Consulting across Strategy, Market Research, Marketing, Growth, Operations and more." />
+  <meta name="author" content="360 Degrees Consulting" />
+
+  <!-- Preconnect to Google Fonts for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Open Graph Tags (for social sharing & LinkedIn) -->
+  <meta property="og:title" content="Our Work — 360 Degrees Consulting" />
+  <meta property="og:description" content="Case studies and client engagements from 360 Degrees Consulting across Strategy, Market Research, Marketing, Growth, Operations and more." />
+  <meta property="og:type" content="website" />
+  <!-- Replace DOMAIN PLACEHOLDER with real domain before launch -->
+  <meta property="og:url" content="https://[DOMAIN PLACEHOLDER]/work.html" />
+  <!-- Replace OG IMAGE PLACEHOLDER with a 1200x630px branded image before launch -->
+  <meta property="og:image" content="https://[DOMAIN PLACEHOLDER]/assets/og-image.jpg" />
+
+  <!-- Twitter/X Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Our Work — 360 Degrees Consulting" />
+  <meta name="twitter:description" content="Case studies and client engagements from 360 Degrees Consulting across Strategy, Market Research, Marketing, Growth, Operations and more." />
+
+  <!-- Canonical Tag (Replace DOMAIN PLACEHOLDER with real domain before launch) -->
+  <link rel="canonical" href="https://[DOMAIN PLACEHOLDER]/work.html" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-root="">
+
+  <!-- Shared Global Navbar (Injected synchronously by js/site.js from js/config.js) -->
+  <header class="editorial-header" id="site-header"></header>
+
+  <main>
+    <!-- =========================================================================
+         PAGE INTRO SECTION
+         - H1: "Work we've done."
+         - Subtitle: "A selection of engagements across sectors and disciplines. Client details are anonymised by default."
+         - Small lighter note: "Full case studies available on request."
+         ========================================================================= -->
+    <!-- Navy Page Header Band -->
+    <div class="page-header">
+      <div class="container">
+        <div class="page-header-eyebrow">SELECTED WORK</div>
+        <h1 class="page-header-title">Work we've done.</h1>
+      </div>
+    </div>
+
+    <section class="work-intro-section">
+      <div class="container work-intro-container">
+        <p class="work-subtitle">
+          A selection of engagements across sectors and disciplines. Client details are anonymised by default.
+        </p>
+        <p class="work-note-sub">Full case studies available on request.</p>
+
+        <!-- =====================================================================
+             FILTER ROWS
+             1. Sector Filter Pills (Top row): "All" + sectors from window.WORK_SECTORS
+             2. Service Area Secondary Filter (Below): All · Strategy · Research · Marketing · Finance · Operations · Growth
+             ===================================================================== -->
+        <div class="work-filters-container">
+          <!-- Primary Sector Filter Pills (Rendered dynamically from window.WORK_SECTORS) -->
+          <div class="work-sector-pills" id="work-sector-pills" role="toolbar" aria-label="Sector Filter Pills"></div>
+
+          <!-- Secondary Service Area Filter Buttons -->
+          <div class="work-service-filters" id="work-service-filters" role="tablist" aria-label="Service Area Filters">
+            <button type="button" class="work-service-btn active" data-service="all">All</button>
+            <button type="button" class="work-service-btn" data-service="strategy">Strategy</button>
+            <button type="button" class="work-service-btn" data-service="research">Research</button>
+            <button type="button" class="work-service-btn" data-service="marketing">Marketing</button>
+            <button type="button" class="work-service-btn" data-service="finance">Finance</button>
+            <button type="button" class="work-service-btn" data-service="operations">Operations</button>
+            <button type="button" class="work-service-btn" data-service="growth">Growth</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         WORK CONTENT AREA
+         1. Featured Case Study (Top, full width)
+         2. Case Studies Grid (2 columns on desktop, 1 on mobile)
+         3. Bottom Confidentiality Note (Lighter text, centred, no box/card)
+         ========================================================================= -->
+    <div class="container">
+
+      <!-- 1. FEATURED CASE STUDY (Rendered dynamically from window.WORK_DATA) -->
+      <section class="featured-case-wrap" id="featured-case-container" aria-label="Featured Engagement"></section>
+
+      <!-- 2. CASE STUDIES GRID (2 columns, 1 on mobile) -->
+      <section class="case-study-grid-2" id="case-studies-grid" aria-label="Case Studies Directory"></section>
+
+      <!-- 3. BOTTOM CONFIDENTIALITY NOTE -->
+      <p class="work-confidentiality-note">
+        We don't publish client names without permission. Every case study here reflects real engagement types. Detailed case studies with full methodology, team composition and outcomes are available on request.
+      </p>
+
+    </div>
+
+    <!-- =========================================================================
+         BOTTOM NAVY CTA BAND
+         - Heading: "Have a similar problem?"
+         - Button: "Let's talk about what we'd do →" linking to contact.html
+         ========================================================================= -->
+    <section class="team-cta-band" style="margin-top: 60px;">
+      <div class="container">
+        <div class="team-cta-wrap">
+          <h2 class="team-cta-title">Have a similar problem?</h2>
+          <p class="team-cta-sub">
+            Tell us what you're solving. We'll assemble the right multidisciplinary pod from India's premier academic institutions.
+          </p>
+          <a href="contact.html" class="btn-ed btn-ed-warm">Let's talk about what we'd do &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Navy Footer (Injected synchronously by js/site.js from js/config.js) -->
+  <footer class="editorial-footer" id="site-footer"></footer>
+
+  <!-- Global Shared Config & Site Layout Engine -->
+  <script src="js/config.js"></script>
+  <script src="js/site.js"></script>
+
+  <!-- Work CMS Data Store -->
+  <script src="data/work.js"></script>
+
+  <!-- Vanilla JavaScript Dynamic Case Studies Renderer & Filter Controller -->
+  <script>
+    (function () {
+      'use strict';
+
+      const cases = window.WORK_DATA || [];
+      const sectors = window.WORK_SECTORS || [];
+
+      let selectedSector = 'all';
+      let selectedService = 'all';
+
+      const sectorContainer = document.getElementById('work-sector-pills');
+      const serviceContainer = document.getElementById('work-service-filters');
+      const featuredContainer = document.getElementById('featured-case-container');
+      const gridContainer = document.getElementById('case-studies-grid');
+
+      // 1. Render Sector Filter Pills dynamically: "All" + all sectors in window.WORK_SECTORS
+      function renderSectorPills() {
+        if (!sectorContainer) return;
+        let html = '<button type="button" class="work-sector-pill active" data-sector="all">All</button>';
+        sectors.forEach(function (sec) {
+          html += '<button type="button" class="work-sector-pill" data-sector="' + sec + '">' + sec + '</button>';
+        });
+        sectorContainer.innerHTML = html;
+
+        const pills = sectorContainer.querySelectorAll('.work-sector-pill');
+        pills.forEach(function (pill) {
+          pill.addEventListener('click', function () {
+            pills.forEach(function (p) { p.classList.remove('active'); });
+            pill.classList.add('active');
+            selectedSector = pill.getAttribute('data-sector');
+            applyFiltersAndRender();
+          });
+        });
+      }
+
+      // 2. Filter logic combining Sector AND Service Area filters
+      function getFilteredCases() {
+        return cases.filter(function (item) {
+          // Sector filter
+          if (selectedSector !== 'all') {
+            if (item.sector !== selectedSector) return false;
+          }
+
+          // Service Area filter
+          if (selectedService !== 'all') {
+            const itemAreas = (item.serviceAreas || []).map(function (a) { return a.toLowerCase(); });
+            const target = selectedService.toLowerCase();
+            const hasMatch = itemAreas.some(function (area) {
+              return area.indexOf(target) !== -1;
+            });
+            if (!hasMatch) return false;
+          }
+
+          return true;
+        });
+      }
+
+      // 3. Render DOM from filtered results
+      function applyFiltersAndRender() {
+        const filtered = getFilteredCases();
+        const featured = filtered.find(function (c) { return c.featured; });
+        const nonFeatured = filtered.filter(function (c) { return !c.featured; });
+
+        // 3A. Render Featured Case Study (Top, full-width)
+        if (featuredContainer) {
+          if (featured) {
+            featuredContainer.style.display = 'block';
+
+            const servicePillsHtml = (featured.serviceAreas || []).map(function (area) {
+              return '<span class="featured-service-pill">' + area + '</span>';
+            }).join('');
+
+            const deliverablesHtml = (featured.deliverables || []).map(function (deliv) {
+              return '<span class="deliverable-tag">' + deliv + '</span>';
+            }).join('');
+
+            featuredContainer.innerHTML = 
+              '<div class="featured-case-card">' +
+                '<div class="featured-case-top-row">' +
+                  '<div class="featured-case-kicker-row">' +
+                    '<span class="featured-case-kicker">FEATURED ENGAGEMENT</span>' +
+                    '<span class="featured-sector-badge">' + featured.sector + '</span>' +
+                    servicePillsHtml +
+                  '</div>' +
+                  '<div class="featured-case-duration">' + featured.duration + ' &bull; ' + featured.year + '</div>' +
+                '</div>' +
+                '<h2 class="featured-case-title">' + featured.title + '</h2>' +
+                '<div class="featured-case-client">' + featured.client + '</div>' +
+                '<div class="featured-case-grid-details">' +
+                  '<div class="featured-detail-col">' +
+                    '<div class="featured-detail-label">The Problem</div>' +
+                    '<p class="featured-detail-text">' + featured.problem + '</p>' +
+                  '</div>' +
+                  '<div class="featured-detail-col">' +
+                    '<div class="featured-detail-label">Our Approach</div>' +
+                    '<p class="featured-detail-text">' + featured.approach + '</p>' +
+                  '</div>' +
+                  '<div class="featured-detail-col">' +
+                    '<div class="featured-detail-label">The Outcome</div>' +
+                    '<p class="featured-detail-text">' + featured.outcome + '</p>' +
+                  '</div>' +
+                '</div>' +
+                '<div class="featured-deliverables-wrap">' +
+                  '<span class="featured-deliverables-label">Deliverables:</span>' +
+                  '<div class="featured-deliverables-tags">' + deliverablesHtml + '</div>' +
+                '</div>' +
+                '<a href="work/case-template.html" class="btn-ed btn-ed-primary">Read Case Study &rarr;</a>' +
+              '</div>';
+          } else {
+            featuredContainer.style.display = 'none';
+            featuredContainer.innerHTML = '';
+          }
+        }
+
+        // 3B. Render Case Studies Grid (2 columns on desktop, 1 on mobile)
+        if (gridContainer) {
+          const cardsToRender = nonFeatured;
+
+          if (cardsToRender.length === 0 && !featured) {
+            gridContainer.innerHTML = 
+              '<div class="insights-empty-state" style="grid-column: 1 / -1;">' +
+                '<h3 class="insights-empty-title">No engagements match this filter</h3>' +
+                '<p class="insights-empty-desc">Try resetting your sector or practice area filters to view other case studies.</p>' +
+              '</div>';
+          } else if (cardsToRender.length === 0 && featured) {
+            gridContainer.innerHTML = 
+              '<div class="insights-empty-state" style="grid-column: 1 / -1;">' +
+                '<h3 class="insights-empty-title">Featured engagement displayed above</h3>' +
+                '<p class="insights-empty-desc">Select "All" sectors or service areas to explore our wider portfolio.</p>' +
+              '</div>';
+          } else {
+            gridContainer.innerHTML = cardsToRender.map(function (item) {
+              const pillsHtml = (item.serviceAreas || []).map(function (area) {
+                return '<span class="case-card-pill">' + area + '</span>';
+              }).join('');
+
+              return '<article class="case-study-card-v2">' +
+                '<div class="case-card-header-row">' +
+                  '<span class="case-card-sector">' + item.sector + '</span>' +
+                  '<span class="case-card-meta-right">' + item.year + ' &bull; ' + item.duration + '</span>' +
+                '</div>' +
+                '<h3 class="case-card-title">' + item.title + '</h3>' +
+                '<div class="case-card-client">' + item.client + '</div>' +
+                '<p class="case-card-problem">' + item.problem + '</p>' +
+                '<div class="case-card-outcome-highlight">' +
+                  '<strong>Outcome Highlight</strong>' +
+                  item.outcome +
+                '</div>' +
+                '<div class="case-card-pills-row">' + pillsHtml + '</div>' +
+                '<a href="work/case-template.html" class="case-card-link">Read Case Study &rarr;</a>' +
+              '</article>';
+            }).join('');
+          }
+        }
+      }
+
+      // Setup Service Area filter buttons
+      if (serviceContainer) {
+        const sBtns = serviceContainer.querySelectorAll('.work-service-btn');
+        sBtns.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            sBtns.forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            selectedService = btn.getAttribute('data-service');
+            applyFiltersAndRender();
+          });
+        });
+      }
+
+      // Initialize
+      renderSectorPills();
+      applyFiltersAndRender();
+    })();
+  </script>
+
+</body>
+</html>

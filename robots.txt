@@ -1,0 +1,9 @@
+# ==============================================================================
+# 360 Degrees Consulting — robots.txt
+# Notice: Replace [DOMAIN PLACEHOLDER] with your production domain before launch.
+# ==============================================================================
+
+User-agent: *
+Allow: /
+
+Sitemap: https://[DOMAIN PLACEHOLDER]/sitemap.xml

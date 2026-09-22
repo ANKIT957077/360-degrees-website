@@ -1,0 +1,599 @@
+/* ===================================================================
+   THEME 5: ACADEMIC HERITAGE & MODERN STRATEGY
+   Benchmark: Oxford Strategy Group • Harvard Student Agencies • Ivy League Consulting
+   Palette: Oxford Navy (#0B1B3D), Warm Academic Parchment (#FAF9F5), Regal Azure (#1D75D8)
+   Typography: Classical Academic Serif (Cormorant Garamond / Playfair Display) + Contemporary Sans
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Academic Heritage Colors */
+  --her-oxford: #0B1B3D;        /* Oxford Navy */
+  --her-navy-deep: #050D1E;     /* Deep Scholarly Ink */
+  --her-parchment: #FAF9F5;     /* Warm Academic Paper */
+  --her-pearl: #F3F1EA;         /* Alternate Parchment Wash */
+  --her-border: #E5E1D8;        /* Antique Book Border */
+  --her-border-dark: #D4CEBF;
+  
+  /* Brand Azure Accent (Logo) */
+  --her-azure: #1D75D8;         /* Regal Azure */
+  --her-azure-muted: #2563EB;
+  --her-gold-accent: #B8860B;   /* Faint Antique Gold accent */
+
+  /* Text Spectrum */
+  --her-text-ink: #111827;
+  --her-text-body: #4A5568;
+  --her-text-muted: #718096;
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-garamond: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  --her-shadow-sm: 0 2px 8px rgba(11, 27, 61, 0.04);
+  --her-shadow-card: 0 4px 18px rgba(11, 27, 61, 0.06);
+  --her-transition: all 0.25s ease;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--her-parchment);
+  color: var(--her-text-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--her-oxford);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+h1 em, h2 em, .italic-phrase {
+  font-family: var(--font-garamond);
+  font-style: italic;
+  color: var(--her-azure);
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--her-transition);
+}
+
+.container {
+  width: 90%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-spacing {
+  padding: 95px 0;
+}
+
+.bg-pearl {
+  background-color: var(--her-pearl);
+  border-top: 1px solid var(--her-border);
+  border-bottom: 1px solid var(--her-border);
+}
+
+/* Collegiate Registry Bar */
+.collegiate-top-bar {
+  background-color: var(--her-oxford);
+  color: #CBD5E1;
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.collegiate-top-bar span.roman-badge {
+  color: #38BDF8;
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  margin-right: 8px;
+}
+
+/* Heritage Header */
+header.heritage-header {
+  height: 86px;
+  background-color: rgba(250, 249, 245, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--her-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.brand-wrap img {
+  height: 52px;
+  width: auto;
+}
+
+.heritage-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.heritage-nav a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--her-oxford);
+  position: relative;
+  padding: 6px 0;
+}
+
+.heritage-nav a:hover,
+.heritage-nav a.active {
+  color: var(--her-azure);
+}
+
+.heritage-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--her-azure);
+  transition: var(--her-transition);
+}
+
+.heritage-nav a:hover::after,
+.heritage-nav a.active::after {
+  width: 100%;
+}
+
+/* Collegiate Button Primitives */
+.btn-her {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: var(--her-transition);
+}
+
+.btn-her-primary {
+  background-color: var(--her-oxford);
+  color: var(--her-parchment);
+  border: 1px solid var(--her-oxford);
+}
+
+.btn-her-primary:hover {
+  background-color: var(--her-azure);
+  border-color: var(--her-azure);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--her-shadow-card);
+}
+
+.btn-her-outline {
+  background: transparent;
+  color: var(--her-oxford);
+  border: 1px solid var(--her-border-dark);
+}
+
+.btn-her-outline:hover {
+  border-color: var(--her-oxford);
+  background-color: var(--her-pearl);
+}
+
+/* Heritage Kicker */
+.her-kicker {
+  font-family: var(--font-garamond);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--her-azure);
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.her-kicker::before,
+.her-kicker::after {
+  content: '♦';
+  font-size: 0.65rem;
+  color: var(--her-azure);
+}
+
+/* Hero Section */
+.hero-heritage {
+  padding: 95px 0 75px;
+  border-bottom: 1px solid var(--her-border);
+  position: relative;
+  background: radial-gradient(circle at 80% 20%, rgba(29, 117, 216, 0.04) 0%, transparent 60%);
+}
+
+.hero-heritage .hero-title {
+  font-size: 3.8rem;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  max-width: 960px;
+}
+
+.hero-heritage .hero-sub {
+  font-size: 1.25rem;
+  color: var(--her-text-body);
+  line-height: 1.7;
+  max-width: 780px;
+  margin-bottom: 38px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+
+/* Collegiate Seals / Crest Badges */
+.crest-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid var(--her-border);
+}
+
+.crest-label {
+  font-family: var(--font-garamond);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--her-text-muted);
+  margin-right: 6px;
+}
+
+.crest-badge {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--her-oxford);
+  background-color: #FFFFFF;
+  border: 1px solid var(--her-border);
+  padding: 6px 14px;
+  border-radius: 2px;
+  box-shadow: var(--her-shadow-sm);
+}
+
+/* 3-Stat Metric Row (Honor Metric Stripe) */
+.heritage-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin: 36px 0;
+}
+
+.her-metric-box {
+  background: #FFFFFF;
+  border: 1px solid var(--her-border);
+  border-top: 3px solid var(--her-oxford);
+  padding: 30px 24px;
+  text-align: center;
+  box-shadow: var(--her-shadow-sm);
+  transition: var(--her-transition);
+}
+
+.her-metric-box:hover {
+  border-top-color: var(--her-azure);
+  transform: translateY(-3px);
+  box-shadow: var(--her-shadow-card);
+}
+
+.her-metric-num {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: var(--her-oxford);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.her-metric-num span {
+  color: var(--her-azure);
+}
+
+.her-metric-label {
+  font-family: var(--font-garamond);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--her-text-muted);
+}
+
+/* 4-Pillar Grid (The Charter) */
+.charter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.charter-card {
+  background: #FFFFFF;
+  border: 1px solid var(--her-border);
+  padding: 30px 26px;
+  box-shadow: var(--her-shadow-sm);
+  transition: var(--her-transition);
+}
+
+.charter-card:hover {
+  border-color: var(--her-azure);
+  transform: translateY(-3px);
+  box-shadow: var(--her-shadow-card);
+}
+
+.charter-index {
+  font-family: var(--font-garamond);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--her-azure);
+  margin-bottom: 8px;
+}
+
+.charter-card h4 {
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+}
+
+.charter-card p {
+  font-size: 0.95rem;
+  color: var(--her-text-body);
+  line-height: 1.65;
+}
+
+/* Capabilities (Consulting Faculties) */
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 40px;
+}
+
+.faculty-card {
+  background: #FFFFFF;
+  border: 1px solid var(--her-border);
+  padding: 34px 26px;
+  box-shadow: var(--her-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--her-transition);
+}
+
+.faculty-card:hover {
+  border-color: var(--her-oxford);
+  box-shadow: var(--her-shadow-card);
+  transform: translateY(-4px);
+}
+
+.faculty-tag {
+  font-family: var(--font-garamond);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--her-azure);
+  margin-bottom: 12px;
+}
+
+.faculty-card h3 {
+  font-size: 1.45rem;
+  margin-bottom: 12px;
+}
+
+.faculty-card p {
+  font-size: 0.95rem;
+  color: var(--her-text-body);
+  line-height: 1.65;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.faculty-deliverables {
+  list-style: none;
+  border-top: 1px solid var(--her-border);
+  padding-top: 16px;
+}
+
+.faculty-deliverables li {
+  font-size: 0.88rem;
+  color: var(--her-text-body);
+  margin-bottom: 8px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.faculty-deliverables li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--her-azure);
+  font-size: 1.1rem;
+}
+
+/* Talent Ecosystem (Fellowship Architecture) */
+.fellowship-box {
+  background-color: var(--her-oxford);
+  color: var(--her-parchment);
+  padding: 60px 48px;
+  border-radius: 4px;
+  margin-top: 36px;
+}
+
+.fellowship-box h3 {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.fellowship-box p {
+  color: #CBD5E1;
+  font-size: 1.05rem;
+  max-width: 720px;
+  line-height: 1.65;
+}
+
+.fellowship-tiers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 30px;
+  margin-top: 36px;
+}
+
+.fellowship-tier-col {
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  padding-left: 18px;
+}
+
+.fellowship-tier-title {
+  font-family: var(--font-garamond);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #38BDF8;
+  margin-bottom: 8px;
+}
+
+.fellowship-tier-col h4 {
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.fellowship-tier-col p {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  line-height: 1.5;
+}
+
+/* Connect Band (Zero Pricing) */
+.heritage-connect-wrap {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heritage-connect-wrap h2 {
+  font-size: 3.2rem;
+  margin-bottom: 16px;
+}
+
+.heritage-connect-wrap p {
+  font-size: 1.2rem;
+  color: var(--her-text-body);
+  line-height: 1.7;
+  margin-bottom: 34px;
+}
+
+/* Heritage Footer */
+footer.heritage-footer {
+  background-color: #FAF9F5;
+  border-top: 1px solid var(--her-border);
+  padding: 60px 0 30px;
+}
+
+.footer-inner-row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--her-border);
+}
+
+.footer-brand img {
+  height: 48px;
+  margin-bottom: 14px;
+}
+
+.footer-nav-columns {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-nav-col h4 {
+  font-family: var(--font-garamond);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--her-oxford);
+  margin-bottom: 14px;
+}
+
+.footer-nav-col ul {
+  list-style: none;
+}
+
+.footer-nav-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-nav-col ul a {
+  font-size: 0.9rem;
+  color: var(--her-text-body);
+}
+
+.footer-nav-col ul a:hover {
+  color: var(--her-azure);
+}
+
+.footer-bottom-line {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  font-size: 0.82rem;
+  color: var(--her-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-heritage .hero-title { font-size: 3rem; }
+  .faculty-grid, .charter-grid, .fellowship-tiers { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .heritage-nav { display: none; }
+  .hero-heritage .hero-title { font-size: 2.3rem; }
+  .heritage-metrics-grid, .faculty-grid, .charter-grid, .fellowship-tiers { grid-template-columns: 1fr; }
+  .footer-inner-row { flex-direction: column; gap: 30px; }
+  .footer-nav-columns { flex-direction: column; gap: 20px; }
+  .footer-bottom-line { flex-direction: column; gap: 10px; text-align: center; }
+}

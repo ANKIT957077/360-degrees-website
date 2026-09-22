@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Team — 360 Degrees Consulting</title>
+  <meta name="description" content="Meet the team behind 360 Degrees Consulting — analysts, strategists and domain experts from IITs, IIMs and leading Delhi University colleges." />
+
+  <!-- Preconnect to Google Fonts for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Open Graph Tags (for social sharing & LinkedIn) -->
+  <meta property="og:title" content="Our Team — 360 Degrees Consulting" />
+  <meta property="og:description" content="Meet the team behind 360 Degrees Consulting — analysts, strategists and domain experts from IITs, IIMs and leading Delhi University colleges." />
+  <meta property="og:type" content="website" />
+  <!-- Replace DOMAIN PLACEHOLDER with real domain before launch -->
+  <meta property="og:url" content="https://[DOMAIN PLACEHOLDER]/team.html" />
+  <!-- Replace OG IMAGE PLACEHOLDER with a 1200x630px branded image before launch -->
+  <meta property="og:image" content="https://[DOMAIN PLACEHOLDER]/assets/og-image.jpg" />
+
+  <!-- Twitter/X Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Our Team — 360 Degrees Consulting" />
+  <meta name="twitter:description" content="Meet the team behind 360 Degrees Consulting — analysts, strategists and domain experts from IITs, IIMs and leading Delhi University colleges." />
+
+  <!-- Canonical Tag (Replace DOMAIN PLACEHOLDER with real domain before launch) -->
+  <link rel="canonical" href="https://[DOMAIN PLACEHOLDER]/team.html" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-root="">
+
+  <!-- Shared Global Navbar (Injected synchronously by js/site.js from js/config.js) -->
+  <header class="editorial-header" id="site-header"></header>
+
+  <main>
+    <!-- =========================================================================
+         PAGE INTRO SECTION
+         - Single, clear, authoritative introduction for the talent directory.
+         - Single <h1> tag: "The minds behind the work."
+         - Subtitle: "Researchers, strategists and domain specialists from India's leading institutions."
+         - How to edit: Update the title or subtitle text directly below.
+         ========================================================================= -->
+    <!-- Navy Page Header Band -->
+    <div class="page-header">
+      <div class="container">
+        <div class="page-header-eyebrow">OUR TEAM</div>
+        <h1 class="page-header-title">The minds behind the work.</h1>
+      </div>
+    </div>
+
+    <section class="team-intro-section">
+      <div class="container team-intro-container">
+        <p class="team-page-subtitle">
+          Researchers, strategists and domain specialists from India's leading institutions.
+        </p>
+
+        <!-- =====================================================================
+             CATEGORY FILTER BAR
+             - 8 Filter buttons: All, Strategy, Finance, Marketing, Research,
+               Operations, Growth, Mentors.
+             - Vanilla JS filters .team-member-card items by data-filter attribute.
+             - Cleanly hides entire tier sections if 0 cards match the filter.
+             ===================================================================== -->
+        <div class="team-filter-bar" role="tablist" aria-label="Team domain filters">
+          <button type="button" class="team-filter-btn active" data-filter="all">All</button>
+          <button type="button" class="team-filter-btn" data-filter="strategy">Strategy</button>
+          <button type="button" class="team-filter-btn" data-filter="finance">Finance</button>
+          <button type="button" class="team-filter-btn" data-filter="marketing">Marketing</button>
+          <button type="button" class="team-filter-btn" data-filter="research">Research</button>
+          <button type="button" class="team-filter-btn" data-filter="operations">Operations</button>
+          <button type="button" class="team-filter-btn" data-filter="growth">Growth</button>
+          <button type="button" class="team-filter-btn" data-filter="mentors">Mentors</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         TEAM DIRECTORY: FOUR TIERS
+         - Tier 1: Leadership (2 cards with 2-line bio)
+         - Tier 2: Directors (4 cards, no bio)
+         - Tier 3: Consultants & Associates (4 placeholder cards, no bio)
+         - Tier 4: Mentors & Advisors (7 cards, no bio)
+         ========================================================================= -->
+    <div class="team-tiers-wrap">
+      <div class="container">
+
+        <!-- ---------------------------------------------------------------------
+             TIER 1: LEADERSHIP
+             - Eyebrow: "LEADERSHIP"
+             - 2 Cards: Rachit (Founder) and Agrim (Co-Founder)
+             - Includes 2-line professional bio and LinkedIn link.
+             --------------------------------------------------------------------- -->
+        <section class="team-tier-section" id="tier-leadership">
+          <div class="team-tier-header">
+            <div class="ed-kicker">LEADERSHIP</div>
+            <h2 class="team-tier-heading">Executive Leadership</h2>
+          </div>
+
+          <div class="team-tier-grid-2">
+            <!-- Rachit - Founder -->
+            <div class="team-member-card" data-filter="strategy">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Rachit"></div>
+              <h3 class="team-member-name">Rachit</h3>
+              <div class="team-member-role">Founder</div>
+              <div class="team-member-inst">[INSTITUTION PLACEHOLDER]</div>
+              <p class="team-member-bio">
+                Leads firm-wide strategy, institutional advisory mandates, and multi-campus consulting pods. Directs client engagements across consumer tech and enterprise ecosystems.
+              </p>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+
+            <!-- Agrim - Co-Founder -->
+            <div class="team-member-card" data-filter="strategy growth">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Agrim"></div>
+              <h3 class="team-member-name">Agrim</h3>
+              <div class="team-member-role">Co-Founder</div>
+              <div class="team-member-inst">[INSTITUTION PLACEHOLDER]</div>
+              <p class="team-member-bio">
+                Directs business expansion, partnership architectures, and high-impact growth strategy. Synthesizes market intelligence to construct executable commercial roadmaps.
+              </p>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ---------------------------------------------------------------------
+             TIER 2: DIRECTORS
+             - Eyebrow: "DIRECTORS"
+             - 4 Cards: Kshitij, Rishabh, Piyush, Prakash
+             - Photo, Name, Role, Institution, LinkedIn button (no bio)
+             --------------------------------------------------------------------- -->
+        <section class="team-tier-section" id="tier-directors">
+          <div class="team-tier-header">
+            <div class="ed-kicker">DIRECTORS</div>
+            <h2 class="team-tier-heading">Practice Directors</h2>
+          </div>
+
+          <div class="team-tier-grid-4">
+            <!-- Kshitij - Corporate Strategy Director -->
+            <div class="team-member-card" data-filter="strategy">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Kshitij"></div>
+              <h3 class="team-member-name">Kshitij</h3>
+              <div class="team-member-role">Corporate Strategy Director</div>
+              <div class="team-member-inst">[INSTITUTION PLACEHOLDER]</div>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+
+            <!-- Rishabh - Research & Insight Director -->
+            <div class="team-member-card" data-filter="research">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Rishabh"></div>
+              <h3 class="team-member-name">Rishabh</h3>
+              <div class="team-member-role">Research &amp; Insight Director</div>
+              <div class="team-member-inst">[INSTITUTION PLACEHOLDER]</div>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+
+            <!-- Piyush - Operations Director -->
+            <div class="team-member-card" data-filter="operations">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Piyush"></div>
+              <h3 class="team-member-name">Piyush</h3>
+              <div class="team-member-role">Operations Director</div>
+              <div class="team-member-inst">[INSTITUTION PLACEHOLDER]</div>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+
+            <!-- Prakash - Partnership Director -->
+            <div class="team-member-card" data-filter="growth marketing">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Prakash"></div>
+              <h3 class="team-member-name">Prakash</h3>
+              <div class="team-member-role">Partnership Director</div>
+              <div class="team-member-inst">[INSTITUTION PLACEHOLDER]</div>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ---------------------------------------------------------------------
+             TIER 3: CONSULTANTS & ASSOCIATES
+             - Eyebrow: "CONSULTANTS & ASSOCIATES"
+             - 4 Placeholder Cards: Name, Role, Institution, LinkedIn button (no bio)
+             --------------------------------------------------------------------- -->
+        <section class="team-tier-section" id="tier-associates">
+          <div class="team-tier-header">
+            <div class="ed-kicker">CONSULTANTS &amp; ASSOCIATES</div>
+            <h2 class="team-tier-heading">Consultants &amp; Associates</h2>
+          </div>
+
+          <div class="team-tier-grid-4">
+            <!-- Consultant 1 (Strategy) -->
+            <div class="team-member-card" data-filter="strategy">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Associate"></div>
+              <h3 class="team-member-name">Associate Name</h3>
+              <div class="team-member-role">Consultant</div>
+              <div class="team-member-inst">[INSTITUTION PLACEHOLDER]</div>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+
+            <!-- Consultant 2 (Finance) -->
+            <div class="team-member-card" data-filter="finance">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Associate"></div>
+              <h3 class="team-member-name">Associate Name</h3>
+              <div class="team-member-role">Consultant</div>
+              <div class="team-member-inst">[INSTITUTION PLACEHOLDER]</div>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+
+            <!-- Consultant 3 (Marketing) -->
+            <div class="team-member-card" data-filter="marketing">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Associate"></div>
+              <h3 class="team-member-name">Associate Name</h3>
+              <div class="team-member-role">Consultant</div>
+              <div class="team-member-inst">[INSTITUTION PLACEHOLDER]</div>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+
+            <!-- Consultant 4 (Research) -->
+            <div class="team-member-card" data-filter="research">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Associate"></div>
+              <h3 class="team-member-name">Associate Name</h3>
+              <div class="team-member-role">Consultant</div>
+              <div class="team-member-inst">[INSTITUTION PLACEHOLDER]</div>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ---------------------------------------------------------------------
+             TIER 4: MENTORS & ADVISORS
+             - Eyebrow: "MENTORS & ADVISORS"
+             - 7 Cards: Ritik Goel, Ankit Singh, Rishi Malhotra, Vaibhav Sharma,
+               Harsh Raj, Sakshi Adlakha, Keshav Garoliya
+             - Photo, Name, Role: Mentor, Institution/expertise: [PLACEHOLDER],
+               LinkedIn button (no bio)
+             --------------------------------------------------------------------- -->
+        <section class="team-tier-section" id="tier-mentors">
+          <div class="team-tier-header">
+            <div class="ed-kicker">MENTORS &amp; ADVISORS</div>
+            <h2 class="team-tier-heading">Mentors &amp; Advisors</h2>
+          </div>
+
+          <div class="team-tier-grid-mentors">
+            <!-- Mentor 1: Ritik Goel -->
+            <div class="team-member-card" data-filter="mentors">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Ritik Goel"></div>
+              <h3 class="team-member-name">Ritik Goel</h3>
+              <div class="team-member-role">Mentor</div>
+              <div class="team-member-inst">[PLACEHOLDER]</div>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+
+            <!-- Mentor 2: Ankit Singh -->
+            <div class="team-member-card" data-filter="mentors">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Ankit Singh"></div>
+              <h3 class="team-member-name">Ankit Singh</h3>
+              <div class="team-member-role">Mentor</div>
+              <div class="team-member-inst">[PLACEHOLDER]</div>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+
+            <!-- Mentor 3: Rishi Malhotra -->
+            <div class="team-member-card" data-filter="mentors">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Rishi Malhotra"></div>
+              <h3 class="team-member-name">Rishi Malhotra</h3>
+              <div class="team-member-role">Mentor</div>
+              <div class="team-member-inst">[PLACEHOLDER]</div>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+
+            <!-- Mentor 4: Vaibhav Sharma -->
+            <div class="team-member-card" data-filter="mentors">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Vaibhav Sharma"></div>
+              <h3 class="team-member-name">Vaibhav Sharma</h3>
+              <div class="team-member-role">Mentor</div>
+              <div class="team-member-inst">[PLACEHOLDER]</div>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+
+            <!-- Mentor 5: Harsh Raj -->
+            <div class="team-member-card" data-filter="mentors">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Harsh Raj"></div>
+              <h3 class="team-member-name">Harsh Raj</h3>
+              <div class="team-member-role">Mentor</div>
+              <div class="team-member-inst">[PLACEHOLDER]</div>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+
+            <!-- Mentor 6: Sakshi Adlakha -->
+            <div class="team-member-card" data-filter="mentors">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Sakshi Adlakha"></div>
+              <h3 class="team-member-name">Sakshi Adlakha</h3>
+              <div class="team-member-role">Mentor</div>
+              <div class="team-member-inst">[PLACEHOLDER]</div>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+
+            <!-- Mentor 7: Keshav Garoliya -->
+            <div class="team-member-card" data-filter="mentors">
+              <div class="team-photo-placeholder" aria-label="Photo placeholder for Keshav Garoliya"></div>
+              <h3 class="team-member-name">Keshav Garoliya</h3>
+              <div class="team-member-role">Mentor</div>
+              <div class="team-member-inst">[PLACEHOLDER]</div>
+              <a href="#" class="team-linkedin-btn" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         BOTTOM NAVY CTA BAND
+         - Full-width dark navy band matching firm branding.
+         - Text: "Want to join the network?"
+         - Button: "View Open Roles" linking to careers.html.
+         ========================================================================= -->
+    <section class="team-cta-band">
+      <div class="container">
+        <div class="team-cta-wrap">
+          <h2 class="team-cta-title">Want to join the network?</h2>
+          <p class="team-cta-sub">
+            We are constantly seeking ambitious problem solvers, analysts, and domain researchers to join our collegiate pods.
+          </p>
+          <a href="careers.html" class="btn-ed btn-ed-warm">View Open Roles &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Navy Footer (Injected synchronously by js/site.js from js/config.js) -->
+  <footer class="editorial-footer" id="site-footer"></footer>
+
+  <!-- Global Shared Config & Site Layout Engine -->
+  <script src="js/config.js"></script>
+  <script src="js/site.js"></script>
+
+  <!-- =========================================================================
+       VANILLA JS FILTER LOGIC:
+       - Toggles active class on clicked filter button.
+       - Filters .team-member-card based on data-filter attribute.
+       - If a tier has 0 visible cards, hides that tier section cleanly.
+       ========================================================================= -->
+  <script>
+    (function () {
+      'use strict';
+
+      const filterButtons = document.querySelectorAll('.team-filter-btn');
+      const teamCards = document.querySelectorAll('.team-member-card');
+      const tierSections = document.querySelectorAll('.team-tier-section');
+
+      if (!filterButtons.length || !teamCards.length) return;
+
+      filterButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          // 1. Toggle active class on buttons
+          filterButtons.forEach(function (btn) {
+            btn.classList.remove('active');
+          });
+          button.classList.add('active');
+
+          const selectedFilter = (button.getAttribute('data-filter') || 'all').toLowerCase().trim();
+
+          // 2. Filter cards based on data-filter attribute
+          teamCards.forEach(function (card) {
+            const cardFilterAttr = (card.getAttribute('data-filter') || '').toLowerCase().trim();
+            const cardCategories = cardFilterAttr.split(/\s+/);
+            const isMatch = (selectedFilter === 'all') || cardCategories.includes(selectedFilter);
+
+            card.style.display = isMatch ? '' : 'none';
+          });
+
+          // 3. Cleanly hide any tier sections with 0 visible cards
+          tierSections.forEach(function (section) {
+            const visibleCards = section.querySelectorAll('.team-member-card:not([style*="display: none"])');
+            if (visibleCards.length === 0) {
+              section.style.display = 'none';
+            } else {
+              section.style.display = '';
+            }
+          });
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
